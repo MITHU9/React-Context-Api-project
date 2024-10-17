@@ -6,7 +6,7 @@ const TodoForm = () => {
 
   const { addTodo } = useTodoContext();
 
-  const handleTodoInput = () => {
+  const handleTodoForm = () => {
     addTodo({
       title: todoInput,
       complete: false,
@@ -15,7 +15,7 @@ const TodoForm = () => {
   };
 
   return (
-    <form className="flex">
+    <form className="flex" onSubmit={handleTodoForm}>
       <input
         type="text"
         placeholder="Write Todo..."
@@ -24,7 +24,6 @@ const TodoForm = () => {
         onChange={(e) => setTodoInput(e.target.value)}
       />
       <button
-        onClick={handleTodoInput}
         type="submit"
         className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0"
       >
