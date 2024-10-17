@@ -22,6 +22,7 @@ const TodoItem = ({ todo }) => {
 
   const handleChecked = () => {
     toggleComplete(todo.id);
+    setIsTodoEditable(false);
     //console.log(todo.id);
   };
 
