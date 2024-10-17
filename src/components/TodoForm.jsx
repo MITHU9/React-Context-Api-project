@@ -6,7 +6,8 @@ const TodoForm = () => {
 
   const { addTodo } = useTodoContext();
 
-  const handleTodoForm = () => {
+  const handleTodoForm = (e) => {
+    e.preventDefault();
     addTodo({
       title: todoInput,
       complete: false,
